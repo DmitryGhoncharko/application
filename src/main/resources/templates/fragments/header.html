@@ -1,0 +1,63 @@
+<!-- fragments/header.html -->
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/admin/home">Каталог товаров</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Управление Товарами -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Управление Товарами
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <a class="dropdown-item" href="/admin/addLight">Создание товара</a>
+                            <a class="dropdown-item" href="/admin/editLight">Редактирование товара</a>
+                        </div>
+                    </li>
+
+                    <!-- Управление Категориями -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Управление Категориями
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <a class="dropdown-item" href="/admin/addCategory">Создание категории</a>
+                            <a class="dropdown-item" href="/admin/editCategory">Редактирование категории</a>
+                        </div>
+                    </li>
+
+                    <!-- Управление Складами -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="warehousesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Управление Складами
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="warehousesDropdown">
+                            <a class="dropdown-item" href="/admin/addWarehouse">Создание склада</a>
+                            <a class="dropdown-item" href="/admin/editWarehouse">Редактирование склада</a>
+                        </div>
+                    </li>
+
+                    <!-- Просмотр и Генерация Отчетов -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Просмотр и Генерация Отчетов
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="reportsDropdown">
+                            <a class="dropdown-item" href="/admin/generateStockReport">Генерация отчетов по запасам</a>
+                            <a class="dropdown-item" href="/admin/generateCategoryReport">Генерация отчетов по категориям</a>
+                            <a class="dropdown-item" href="/admin/generateWarehouseReport">Генерация отчетов по складам</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Выйти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

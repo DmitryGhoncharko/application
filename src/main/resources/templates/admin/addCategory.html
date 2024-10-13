@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить Категорию</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Включение хедера -->
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container mt-5">
+    <h2>Добавление Категории</h2>
+    <form action="/admin/addCategory" method="post">
+        <div class="form-group">
+            <label for="categoryName">Название категории</label>
+            <input type="text" id="categoryName" name="categoryName" class="form-control" required placeholder="Введите название категории">
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить Категорию</button>
+        <a href="/admin/home" class="btn btn-secondary">Назад</a>
+    </form>
+    <div th:if="${successMessage}" class="alert alert-success mt-3" th:text="${successMessage}"></div>
+    <div th:if="${errorMessage}" class="alert alert-danger mt-3" th:text="${errorMessage}"></div>
+</div>
+
+<!-- Подключение JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

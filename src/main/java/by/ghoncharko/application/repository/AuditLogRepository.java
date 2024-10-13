@@ -1,0 +1,7 @@
+package by.ghoncharko.application.repository;
+
+import by.ghoncharko.application.entity.AuditLog;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AuditLogRepository extends JpaRepository<AuditLog, Long> {
+}
